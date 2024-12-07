@@ -52,10 +52,10 @@ with open(prices_filename, 'a', encoding='utf-8', newline='') as prices_csv_file
                 row = {
                     'instrument': instrument,
                     'date': date,
-                    'high': str(day['high']).replace(".", ","),
-                    'low': str(day['low']).replace(".", ","),
-                    'open': str(day['open']).replace(".", ","),
-                    'last': str(day['last']).replace(".", ","),
-                    'volume': str(day['volume']).replace(".", ","),
+                    'high': str(day['high']), #.replace(".", ","),
+                    'low': str(day['low']),   # .replace(".", ","),
+                    'open': str(day['open']), # .replace(".", ","),
+                    'last': str(day['last']), #.replace(".", ","),
+                    'volume': str(day['volume']) #.replace(".", ","),
                 }
                 writer.writerow(row)
