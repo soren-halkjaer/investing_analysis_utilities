@@ -36,6 +36,7 @@ with open(prices_filename, 'a', encoding='utf-8', newline='') as prices_csv_file
     writer = csv.DictWriter(prices_csv_file, delimiter=';', fieldnames=fieldnames)
     for share in sharelist:
         instrument = share[0]
+        print(instrument)
         url = 'https://api.prod.nntech.io/market-data/price-time-series/v2/period/YEAR_5/identifier/' + \
             share[1]
         params = {
